@@ -1,5 +1,6 @@
 def findtotalcostoftile(wid,hei,cost):
     totalsquarefootage=float((wid*hei)+(wid*hei)*0.10)
+    #of the total square footage,find how many 10 square feet and multiple the result with cost per one square feet
     totalcost=(totalsquarefootage/10)*float(cost)
     return totalcost
 width = input("Enter the width of your floor plan in feet >> ")
@@ -9,5 +10,6 @@ if width.isdigit and float(width)>0 and height.isdigit and float(height)>0 and C
     print(findtotalcostoftile(float(width),float(height),float(Costpertile)))
 else:
     print("Given input is not in correct format, please try again")
+
 
 
