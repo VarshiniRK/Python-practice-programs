@@ -41,8 +41,23 @@ x=100
 print(n**x)
 print(pow(n,x))
 
-
-
+#Using power of exponents approach
+def power(x, y):
+    result = 1  # Our answer (starts empty)
+    base = x    # Current power generator (x¹, x², x⁴, ...)
+    
+    while y > 0:
+        # Check if we need the current power
+        if y % 2 == 1:  # If last binary digit is 1
+            result *= base  # Collect this power!
+        
+        # Prepare next power (double the exponent)
+        base *= base  # x¹ → x² → x⁴ → x⁸ ...
+        
+        # Move to next binary digit
+        y //= 2  # Shift right in binary
+    
+    return result
 
 
 
